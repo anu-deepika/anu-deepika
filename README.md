@@ -28,7 +28,7 @@ Welcome to anu-deepika's github
 
 <p align="left">
   <!-- transparent stats card so it blends into whatever github theme the viewer uses -->
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=transparent&hide_border=true&title_color=888888&text_color=a1a1a1&icon_color=888888" alt="stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=anu-deepika&show_icons=true&theme=transparent&hide_border=true&title_color=888888&text_color=a1a1a1&icon_color=888888" alt="stats" />
 </p>
 
 ---
@@ -40,5 +40,5 @@ Welcome to anu-deepika's github
   still needs the github action script to run: https://github.com/Platane/snk 
 -->
 <p align="left">
-  <img src="https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME/output/github-contribution-grid-snake.svg" alt="snake" />
+  <img src="https://raw.githubusercontent.com/anu-deepika/anu-deepika/output/github-contribution-grid-snake.svg" alt="snake" />
 </p>
