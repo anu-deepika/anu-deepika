@@ -8,6 +8,7 @@
 
 <br>
 
+
 [my work](https://github.com/anu-deepika)
 
 <br>
@@ -18,14 +19,10 @@
 
 <br><br>
 
-<!-- intricate falling pixel block pattern (code generated SVG) -->
-<img src="https://pixel-blocks.demolab.com/api?color=E91E63&size=600x200&speed=slow&density=high" alt="falling blocks" />
+<!-- real, working code-generated data wave of your github activity -->
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=anu-deepika&bg_color=00000000&color=E91E63&line=E91E63&point=E91E63&area=true&hide_border=true&hide_title=true" alt="data wave" />
 
 <br><br>
 
 <!-- transparent stats card in red -->
 <img src="https://github-readme-stats.vercel.app/api?username=anu-deepika&theme=transparent&hide_border=true&title_color=E91E63&text_color=E91E63&icon_color=E91E63&hide_title=true&hide_rank=true" alt="stats" />
-
-<br><br>
-
-*the above 'animations' are created using code-generated SVGs via APIs.*
