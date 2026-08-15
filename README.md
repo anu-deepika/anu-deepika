@@ -8,14 +8,24 @@
 
 <br>
 
-<div align="center">
-  <!-- stripped down tech stack -->
-  <p><code>js</code> • <code>py</code> • <code>react</code></p>
-</div>
+[my work](https://github.com/anu-deepika)
 
 <br>
 
-<div align="center">
-  <!-- stats card, totally stripped down. title and rank hidden. text is pure magenta/red. -->
-  <img src="https://github-readme-stats.vercel.app/api?username=anu-deepika&theme=transparent&hide_border=true&title_color=E91E63&text_color=E91E63&icon_color=E91E63&hide_title=true&hide_rank=true" alt="stats" />
-</div>
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=28&pause=2000&color=E91E63&width=600&lines='just+writing+code.;|" alt="typing" />
+</a>
+
+<br><br>
+
+<!-- intricate falling pixel block pattern (code generated SVG) -->
+<img src="https://pixel-blocks.demolab.com/api?color=E91E63&size=600x200&speed=slow&density=high" alt="falling blocks" />
+
+<br><br>
+
+<!-- transparent stats card in red -->
+<img src="https://github-readme-stats.vercel.app/api?username=anu-deepika&theme=transparent&hide_border=true&title_color=E91E63&text_color=E91E63&icon_color=E91E63&hide_title=true&hide_rank=true" alt="stats" />
+
+<br><br>
+
+*the above 'animations' are created using code-generated SVGs via APIs.*
