@@ -25,3 +25,15 @@
 
 <!-- transparent stats card in red -->
 <img src="https://github-readme-stats.vercel.app/api?username=anu-deepika&theme=transparent&hide_border=true&title_color=E91E63&text_color=E91E63&icon_color=E91E63&hide_title=true&hide_rank=true" alt="stats" />
+### / that snake thing
+
+<!-- 
+  the snake contribution graph. 
+  still needs the github action script to run: https://github.com/Platane/snk 
+-->
+<p align="left">
+<div align="center">
+  <!-- the snake, presented with zero context or explanation. -->
+  <img src="https://raw.githubusercontent.com/anu-deepika/anu-deepika/output/github-contribution-grid-snake.svg" alt="snake" />
+</p>
+</div>
