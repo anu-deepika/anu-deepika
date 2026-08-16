@@ -2,7 +2,7 @@
   <!-- this is your custom text "gif". the color is set to a deep magenta/red (hex #E91E63). -->
   <!-- to make it say whatever you want, just change the text after "lines=" -->
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&center=true&vCenter=true&width=400&lines=does+it+really+matter?;" alt="typing" />
+    <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&center=true&vCenter=true&width=400&lines=it doesn't matter;" alt="typing" />
   </a>
 </div>
 
@@ -13,7 +13,7 @@
 <br>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=28&pause=2000&color=E91E63&width=600&lines=hey,+it's+anu+deepika.;|" alt="typing" />
+  <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=28&pause=2000&color=E91E63&width=600&lines=just, coding;|" alt="typing" />
 </a>
 
 <br><br>
