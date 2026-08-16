@@ -17,7 +17,7 @@ jobs:
           github_user_name: anu-deepika
           outputs: |
             outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=#E91E63&color_dots=#161b22,#4d081e,#8a0e36,#c7154e,#e91e63
+            dist/github-contribution-grid-snake.svg?color_snake=#E91E63&color_dots=#0d1117,#3f0e1f,#7a1233,#b81747,#e91e63
             
       - uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
