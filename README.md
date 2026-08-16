@@ -2,7 +2,7 @@
   <!-- this is your custom text "gif". the color is set to a deep magenta/red (hex #E91E63). -->
   <!-- to make it say whatever you want, just change the text after "lines=" -->
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&center=true&vCenter=true&width=400&lines=it+doesn't+matter;" alt="typing" />
+    <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&center=true&vCenter=true&width=400&lines=does+it+reallly+matter?;" alt="typing" />
   </a>
 </div>
 
@@ -13,9 +13,21 @@
 <br>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=28&pause=2000&color=E91E63&width=600&lines=just,+coding;|" alt="typing" />
+  <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&width=600&lines=a+sense+of+certainty;|" alt="typing" />
+  
 </a>
-
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&width=600&lines=and+some+uncertainty;|" alt="typing" />
+  
+</a>
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&width=600&lines=do+i+let+the+world+decide?;|" alt="typing" />
+  
+</a>
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&width=600&lines=maybe+theres+something+else+to+be+discovered;|" alt="typing" />
+  
+</a>
 <br><br>
 
 <!-- real, working code-generated data wave of your github activity -->
@@ -27,6 +39,7 @@
 <img src="https://github-readme-stats.vercel.app/api?username=anu-deepika&theme=transparent&hide_border=true&title_color=E91E63&text_color=E91E63&icon_color=E91E63&hide_title=true&hide_rank=true" alt="" />
 
 <br><br>
+
 
 <!-- the snake, presented with zero context or explanation. -->
 <div align="center">
