@@ -34,6 +34,6 @@
 <p align="left">
 <div align="center">
   <!-- the snake, presented with zero context or explanation. -->
-  <img src="https://raw.githubusercontent.com/anu-deepika/anu-deepika/output/github-contribution-grid-snake.svg" alt="snake" />
+  <img src="https://raw.githubusercontent.com/anu-deepika/anu-deepika/output/github-contribution-grid-snake.svg?v=1" alt="snake" />
 </p>
 </div>
