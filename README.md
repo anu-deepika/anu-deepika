@@ -2,7 +2,7 @@
   <!-- this is your custom text "gif". the color is set to a deep magenta/red (hex #E91E63). -->
   <!-- to make it say whatever you want, just change the text after "lines=" -->
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&center=true&vCenter=true&width=400&lines=does+it+reallly+matter?;" alt="typing" />
+    <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&center=true&vCenter=true&width=400&lines=what+is+eternal?;" alt="typing" />
   </a>
 </div>
 
@@ -12,23 +12,6 @@
 
 <br>
 
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&width=600&lines=a+sense+of+certainty;|" alt="typing" />
-  
-</a>
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&width=600&lines=and+some+uncertainty;|" alt="typing" />
-  
-</a>
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&width=600&lines=do+i+let+the+world+decide?;|" alt="typing" />
-  
-</a>
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Courier+New&weight=400&size=18&pause=2000&color=E91E63&width=600&lines=maybe+theres+something+else+to+be+discovered;|" alt="typing" />
-  
-</a>
-<br><br>
 
 <!-- real, working code-generated data wave of your github activity -->
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=anu-deepika&bg_color=00000000&color=E91E63&line=E91E63&point=E91E63&area=true&hide_border=true&hide_title=true" alt="" />
