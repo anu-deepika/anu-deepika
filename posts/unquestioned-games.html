@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>usr@ubuntu: ~/posts/unquestioned-games.html</title>
+  <style>
+    :root {
+      --bg-color: #0a0004;
+      --panel-bg: #11020a;
+      --ubuntu-header: #2c001e;
+      --ubuntu-header-border: #380c2a;
+      --main-pink: #ff2a7a;
+      --dim-pink: #881133;
+      --glow-color: rgba(255, 42, 122, 0.45);
+      --font-stack: 'Ubuntu Mono', 'Courier New', Courier, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--main-pink);
+      font-family: var(--font-stack);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-shadow: 0 0 6px var(--glow-color);
+    }
+
+    body::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                  linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+      z-index: 10;
+      background-size: 100% 3px, 6px 100%;
+      pointer-events: none;
+    }
+
+    .terminal-window {
+      width: 100%;
+      max-width: 800px;
+      border: 1px solid var(--ubuntu-header-border);
+      border-radius: 6px 6px 4px 4px;
+      box-shadow: 0 0 25px rgba(255, 42, 122, 0.2);
+      overflow: hidden;
+      background-color: var(--panel-bg);
+      z-index: 1;
+      margin: 20px 0;
+    }
+
+    .terminal-header {
+      background: linear-gradient(180deg, #3c3b37 0%, var(--ubuntu-header) 100%);
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--ubuntu-header-border);
+      user-select: none;
+    }
+
+    .terminal-title {
+      font-size: 0.85rem;
+      color: #dfdbd2;
+      font-weight: bold;
+    }
+
+    .ubuntu-controls { display: flex; gap: 10px; align-items: center; }
+
+    .control-btn {
+      width: 16px; height: 16px; border-radius: 50%;
+      background-color: #3d3a39; color: #dfdbd2;
+      display: flex; justify-content: center; align-items: center;
+      font-size: 10px; border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .control-btn.close { background-color: #e95420; color: #fff; }
+
+    .terminal-body { padding: 30px; line-height: 1.7; }
+
+    .prompt { color: #ff5599; font-weight: bold; }
+    .command { color: #ffffff; text-shadow: 0 0 5px #ffffff; }
+
+    .nav-back {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #ff85b3;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-back:hover { color: #ffffff; text-decoration: underline; }
+
+    .post-title {
+      color: #ffffff;
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    }
+
+    .post-meta { color: var(--dim-pink); font-size: 0.85rem; margin-bottom: 25px; }
+
+    .quote-box {
+      border-left: 3px solid var(--main-pink);
+      background-color: rgba(255, 42, 122, 0.05);
+      padding: 15px 20px;
+      margin: 20px 0 30px 0;
+      color: #ffffff;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      box-shadow: 0 0 10px rgba(255, 42, 122, 0.1);
+    }
+
+    .article-body p { margin-bottom: 18px; color: #ff99be; }
+    .article-body h2 { color: #ffffff; margin: 25px 0 10px 0; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+
+  <div class="terminal-window">
+    <div class="terminal-header">
+      <span class="terminal-title">usr@ubuntu: ~/posts/unquestioned-games.html</span>
+      <div class="ubuntu-controls">
+        <span class="control-btn">—</span>
+        <span class="control-btn">□</span>
+        <span class="control-btn close">✕</span>
+      </div>
+    </div>
+
+    <div class="terminal-body">
+      <a href="../index.html" class="nav-back">&lt;-- cd .. (back to index)</a>
+
+      <p><span class="prompt">usr@ubuntu:~$</span> <span class="command">cat unquestioned-games.html</span></p>
+
+      <h1 class="post-title">Playing the Game on Your Own Terms</h1>
+      <div class="post-meta">PUBLISHED: 2026-08-22 | AUTHOR: GUEST</div>
+
+      <div class="quote-box">
+        "The world has incentives, expectations, hierarchies, loopholes, social rules, and contradictions. You don't have to rebel against everything, but you also don't have to unquestioningly play every game exactly as presented."
+      </div>
+
+      <div class="article-body">
+        <p>Most of modern life is structured like a series of pre-installed software programs. You enter school, take on career ladders, navigate social dynamics, and adopt status metrics that were designed long before you got here. Because these structures are everywhere, it is easy to assume they are absolute rules of physics rather than arbitrary social mechanics.</p>
+
+        <h2>1. Rebellion vs. Architecture</h2>
+        <p>There are two common traps when dealing with society's frameworks. The first is blind compliance—accepting every expectation without asking who designed it or why. The second is reflex rebellion—fighting every single rule just to feel free. Reflex rebellion is still controlled by the system; if your every move is reacting against a rule, the rule is still dictating your choices.</p>
+
+        <h2>2. Understanding the Rules to Find the Loopholes</h2>
+        <p>The middle path is strategic awareness. Real freedom comes from realizing that every social rule, career path, and hierarchy is simply a game. Games have win conditions, but they also have loopholes, side quests, and alternative paths. You can participate in society's systems to get what you need (stability, resources, connection) while entirely ignoring the vanity metrics that do not serve you.</p>
+
+        <h2>3. Designing Your Own Win Conditions</h2>
+        <p>You don't need to burn the board down to play differently. You just need to stop letting the board define what 'winning' looks like for you. Understand the incentives, respect the useful rules, exploit the harmless loopholes, and build a life that makes sense to you—not just to the system.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
