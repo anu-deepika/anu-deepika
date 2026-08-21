@@ -1,4 +1,4 @@
-anu-deepika.github.io/anu-deepika
+[anu-deepika.github.io/anu-deepika](https://anu-deepika.github.io/anu-deepika/)
 <div align="center">
 
   <!-- this is your custom text "gif". the color is set to a deep magenta/red (hex #E91E63). -->
