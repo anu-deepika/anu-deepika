@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>guest@blog:~</title>
+  <style>
+    :root {
+      --bg-color: #0a0004;
+      --panel-bg: #050002;
+      --header-bg: #1a030d;
+      --main-pink: #ff2a7a;
+      --dim-pink: #881133;
+      --glow-color: rgba(255, 42, 122, 0.45);
+      --font-stack: 'Courier New', Courier, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--main-pink);
+      font-family: var(--font-stack);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-shadow: 0 0 6px var(--glow-color);
+    }
+
+    /* CRT Scanline Overlay */
+    body::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                  linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+      z-index: 10;
+      background-size: 100% 3px, 6px 100%;
+      pointer-events: none;
+    }
+
+    .terminal-window {
+      width: 100%;
+      max-width: 720px;
+      border: 1px solid var(--dim-pink);
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255, 42, 122, 0.25);
+      overflow: hidden;
+      background-color: var(--panel-bg);
+      z-index: 1;
+    }
+
+    .terminal-header {
+      background-color: var(--header-bg);
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--dim-pink);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .btn-close { background-color: #ff0055; }
+    .btn-min { background-color: #ffaa00; }
+    .btn-max { background-color: #33cc66; }
+
+    .terminal-title {
+      margin-left: 15px;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      letter-spacing: 1px;
+    }
+
+    .terminal-body {
+      padding: 25px;
+      line-height: 1.6;
+    }
+
+    .prompt {
+      color: #ff6699;
+      font-weight: bold;
+    }
+
+    .command {
+      color: #ffffff;
+      text-shadow: 0 0 5px #ffffff;
+    }
+
+    .output {
+      margin: 10px 0 25px 0;
+      color: #ff85b3;
+    }
+
+    .post-list {
+      list-style: none;
+    }
+
+    .post-item {
+      margin-bottom: 10px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .post-date {
+      color: var(--dim-pink);
+      font-size: 0.9rem;
+    }
+
+    .post-link {
+      color: var(--main-pink);
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    .post-link:hover {
+      color: #ffffff;
+      background-color: var(--dim-pink);
+      padding: 0 6px;
+      box-shadow: 0 0 10px var(--main-pink);
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 9px;
+      height: 17px;
+      background-color: var(--main-pink);
+      vertical-align: middle;
+      box-shadow: 0 0 8px var(--main-pink);
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="terminal-window">
+    <!-- Header window controls -->
+    <div class="terminal-header">
+      <div class="buttons">
+        <div class="btn btn-close"></div>
+        <div class="btn btn-min"></div>
+        <div class="btn btn-max"></div>
+      </div>
+      <span class="terminal-title">guest@blog:~ (zsh)</span>
+    </div>
+
+    <div class="terminal-body">
+      <!-- Command 1: Welcome message -->
+      <p><span class="prompt">guest@blog:~$</span> <span class="command">cat intro.txt</span></p>
+      <p class="output">
+        > Welcome to my personal logbook.<br>
+        > Documenting builds, thoughts, and creative side projects.
+      </p>
+
+      <!-- Command 2: Post Directory -->
+      <p><span class="prompt">guest@blog:~$</span> <span class="command">ls -la ./posts</span></p>
+      
+      <div class="output">
+        <ul class="post-list">
+          <li class="post-item">
+            <span class="post-date">[2026-08-22]</span>
+            <a href="posts/my-first-post.html" class="post-link">my-first-post.html</a>
+          </li>
+          <li class="post-item">
+            <span class="post-date">[2026-08-15]</span>
+            <a href="posts/terminal-vibes.html" class="post-link">terminal-vibes.html</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Active Cursor Line -->
+      <p><span class="prompt">guest@blog:~$</span> <span class="cursor"></span></p>
+    </div>
+  </div>
+
+</body>
+</html>
