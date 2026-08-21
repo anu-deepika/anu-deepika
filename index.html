@@ -3,23 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>guest@blog:~</title>
+  <title>usr@ubuntu: ~</title>
   <style>
     :root {
       --bg-color: #0a0004;
-      --panel-bg: #050002;
-      --header-bg: #1a030d;
+      --panel-bg: #11020a;
+      --ubuntu-header: #2c001e;
+      --ubuntu-header-border: #380c2a;
       --main-pink: #ff2a7a;
       --dim-pink: #881133;
       --glow-color: rgba(255, 42, 122, 0.45);
-      --font-stack: 'Courier New', Courier, monospace;
+      --font-stack: 'Ubuntu Mono', 'Courier New', Courier, monospace;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background-color: var(--bg-color);
@@ -48,86 +45,74 @@
 
     .terminal-window {
       width: 100%;
-      max-width: 720px;
-      border: 1px solid var(--dim-pink);
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(255, 42, 122, 0.25);
+      max-width: 760px;
+      border: 1px solid var(--ubuntu-header-border);
+      border-radius: 6px 6px 4px 4px;
+      box-shadow: 0 0 25px rgba(255, 42, 122, 0.2);
       overflow: hidden;
       background-color: var(--panel-bg);
       z-index: 1;
     }
 
+    /* Ubuntu Header Bar */
     .terminal-header {
-      background-color: var(--header-bg);
-      padding: 10px 15px;
+      background: linear-gradient(180deg, #3c3b37 0%, var(--ubuntu-header) 100%);
+      padding: 8px 14px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--dim-pink);
+      border-bottom: 1px solid var(--ubuntu-header-border);
+      user-select: none;
     }
-
-    .buttons {
-      display: flex;
-      gap: 8px;
-    }
-
-    .btn {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-
-    .btn-close { background-color: #ff0055; }
-    .btn-min { background-color: #ffaa00; }
-    .btn-max { background-color: #33cc66; }
 
     .terminal-title {
-      margin-left: 15px;
       font-size: 0.85rem;
-      opacity: 0.8;
-      letter-spacing: 1px;
+      color: #dfdbd2;
+      font-weight: bold;
+      letter-spacing: 0.5px;
     }
+
+    .ubuntu-controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .control-btn {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #3d3a39;
+      color: #dfdbd2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 10px;
+      line-height: 1;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .control-btn.close { background-color: #e95420; color: #fff; }
 
     .terminal-body {
       padding: 25px;
       line-height: 1.6;
     }
 
-    .prompt {
-      color: #ff6699;
-      font-weight: bold;
-    }
+    .prompt { color: #ff5599; font-weight: bold; }
+    .command { color: #ffffff; text-shadow: 0 0 5px #ffffff; }
 
-    .command {
-      color: #ffffff;
-      text-shadow: 0 0 5px #ffffff;
-    }
+    .output { margin: 10px 0 25px 0; color: #ff85b3; }
 
-    .output {
-      margin: 10px 0 25px 0;
-      color: #ff85b3;
-    }
-
-    .post-list {
-      list-style: none;
-    }
-
-    .post-item {
-      margin-bottom: 10px;
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .post-date {
-      color: var(--dim-pink);
-      font-size: 0.9rem;
-    }
+    .post-list { list-style: none; }
+    .post-item { margin-bottom: 12px; display: flex; gap: 15px; flex-wrap: wrap; }
+    .post-date { color: var(--dim-pink); font-size: 0.9rem; }
 
     .post-link {
       color: var(--main-pink);
       text-decoration: none;
       font-weight: bold;
-      transition: all 0.2s ease;
     }
 
     .post-link:hover {
@@ -147,51 +132,40 @@
       animation: blink 1s infinite;
     }
 
-    @keyframes blink {
-      0%, 49% { opacity: 1; }
-      50%, 100% { opacity: 0; }
-    }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
   </style>
 </head>
 <body>
 
   <div class="terminal-window">
-    <!-- Header window controls -->
     <div class="terminal-header">
-      <div class="buttons">
-        <div class="btn btn-close"></div>
-        <div class="btn btn-min"></div>
-        <div class="btn btn-max"></div>
+      <span class="terminal-title">usr@ubuntu: ~</span>
+      <div class="ubuntu-controls">
+        <span class="control-btn">—</span>
+        <span class="control-btn">□</span>
+        <span class="control-btn close">✕</span>
       </div>
-      <span class="terminal-title">guest@blog:~ (zsh)</span>
     </div>
 
     <div class="terminal-body">
-      <!-- Command 1: Welcome message -->
-      <p><span class="prompt">guest@blog:~$</span> <span class="command">cat intro.txt</span></p>
+      <p><span class="prompt">usr@ubuntu:~$</span> <span class="command">cat intro.txt</span></p>
       <p class="output">
-        > Welcome to my personal logbook.<br>
-        > Documenting builds, thoughts, and creative side projects.
+        > Welcome to my terminal logbook.<br>
+        > Thoughts on systems, life rules, and unconventional paths.
       </p>
 
-      <!-- Command 2: Post Directory -->
-      <p><span class="prompt">guest@blog:~$</span> <span class="command">ls -la ./posts</span></p>
+      <p><span class="prompt">usr@ubuntu:~$</span> <span class="command">ls -la ./posts</span></p>
       
       <div class="output">
         <ul class="post-list">
           <li class="post-item">
             <span class="post-date">[2026-08-22]</span>
-            <a href="posts/my-first-post.html" class="post-link">my-first-post.html</a>
-          </li>
-          <li class="post-item">
-            <span class="post-date">[2026-08-15]</span>
-            <a href="posts/terminal-vibes.html" class="post-link">terminal-vibes.html</a>
+            <a href="posts/unquestioned-games.html" class="post-link">unquestioned-games.html</a>
           </li>
         </ul>
       </div>
 
-      <!-- Active Cursor Line -->
-      <p><span class="prompt">guest@blog:~$</span> <span class="cursor"></span></p>
+      <p><span class="prompt">usr@ubuntu:~$</span> <span class="cursor"></span></p>
     </div>
   </div>
 
