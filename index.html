@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hello ~ welcome to my space</title>
+  <title>notes</title>
+
   <style>
     :root {
       --bg-color: #0c0207;
@@ -18,7 +19,11 @@
       --font-stack: 'Ubuntu Mono', 'Courier New', monospace;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       background-color: var(--bg-color);
@@ -31,12 +36,15 @@
       padding: 24px;
     }
 
-    /* Subtle retro scanline background */
     body::before {
       content: "";
       position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+      inset: 0;
+      background:
+        linear-gradient(
+          rgba(18, 16, 16, 0) 50%,
+          rgba(0, 0, 0, 0.25) 50%
+        );
       background-size: 100% 4px;
       pointer-events: none;
       z-index: 10;
@@ -70,32 +78,32 @@
       letter-spacing: 0.5px;
     }
 
-    .ubuntu-controls { display: flex; gap: 8px; align-items: center; }
+    .ubuntu-controls {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
 
     .control-btn {
-      width: 14px; height: 14px; border-radius: 50%;
-      background-color: #4a1535; color: var(--warm-pink);
-      display: flex; justify-content: center; align-items: center;
-      font-size: 9px; cursor: pointer;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #4a1535;
+      color: var(--warm-pink);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 9px;
     }
-    .control-btn.close { background-color: #e95420; color: #fff; }
+
+    .control-btn.close {
+      background-color: #e95420;
+      color: #fff;
+    }
 
     .terminal-body {
       padding: 30px;
       line-height: 1.7;
-    }
-
-    .greeting {
-      font-size: 1.2rem;
-      color: #ffffff;
-      margin-bottom: 12px;
-      text-shadow: 0 0 10px var(--neon-pink);
-    }
-
-    .intro-text {
-      color: var(--warm-pink);
-      margin-bottom: 28px;
-      font-size: 1.02rem;
     }
 
     .section-label {
@@ -103,19 +111,24 @@
       font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       font-weight: bold;
     }
 
     .post-card {
-      display: block;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
       background-color: rgba(255, 42, 122, 0.04);
       border: 1px solid var(--dim-border);
       border-radius: 6px;
-      padding: 18px 20px;
+
+      padding: 14px 18px;
+      margin-bottom: 12px;
+
       text-decoration: none;
       transition: all 0.25s ease;
-      margin-bottom: 16px;
     }
 
     .post-card:hover {
@@ -127,20 +140,13 @@
 
     .post-title {
       color: #ffffff;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: bold;
-      margin-bottom: 6px;
-    }
-
-    .post-snippet {
-      color: var(--warm-pink);
-      font-size: 0.92rem;
     }
 
     .post-date {
       color: #b3597d;
       font-size: 0.8rem;
-      margin-top: 10px;
     }
 
     .cursor {
@@ -151,17 +157,42 @@
       vertical-align: middle;
       box-shadow: 0 0 8px var(--neon-pink);
       animation: blink 1s infinite;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
-    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    @keyframes blink {
+      0%, 49% {
+        opacity: 1;
+      }
+
+      50%, 100% {
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 12px;
+      }
+
+      .terminal-body {
+        padding: 20px;
+      }
+
+      .post-card {
+        padding: 12px 14px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <div class="terminal-window">
+
     <div class="terminal-header">
-      <span class="terminal-title">✨ welcome_home.sh</span>
+      <span class="terminal-title">notes</span>
+
       <div class="ubuntu-controls">
         <span class="control-btn">—</span>
         <span class="control-btn">□</span>
@@ -170,20 +201,18 @@
     </div>
 
     <div class="terminal-body">
-      <div class="greeting">Hey there! Welcome to my blog 🚀</div>
-      <p class="intro-text">
-        I write about building cool things, thinking through big ideas, and navigating life with curiosity and optimism.
-      </p>
 
-      <div class="section-label">// Latest Writings</div>
+      <div class="section-label">notes/</div>
 
-      <a href="posts/unquestioned-games.html" class="post-card">
-        <div class="post-title">Playing the Game on Your Own Terms ✦</div>
-        <div class="post-snippet">Finding freedom in social rules, creating your own win conditions, and building intentional paths.</div>
-        <div class="post-date">Published: Aug 22, 2026</div>
+      <a href="posts/game.html" class="post-card">
+        <span class="post-title">game</span>
+        <span class="post-date">22.08.26</span>
       </a>
 
-      <div><span class="cursor"></span></div>
+      <div>
+        <span class="cursor"></span>
+      </div>
+
     </div>
   </div>
 
