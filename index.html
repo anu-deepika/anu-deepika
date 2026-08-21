@@ -3,170 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>usr@ubuntu: ~</title>
+  <title>My Blog</title>
   <style>
     :root {
-      --bg-color: #0a0004;
-      --panel-bg: #11020a;
-      --ubuntu-header: #2c001e;
-      --ubuntu-header-border: #380c2a;
-      --main-pink: #ff2a7a;
-      --dim-pink: #881133;
-      --glow-color: rgba(255, 42, 122, 0.45);
-      --font-stack: 'Ubuntu Mono', 'Courier New', Courier, monospace;
+      --bg: #121012;
+      --card-bg: #1a1618;
+      --border: #33262b;
+      --text-main: #f0e6e8;
+      --text-dim: #a39398;
+      --accent-pink: #ff4d88;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
-      background-color: var(--bg-color);
-      color: var(--main-pink);
-      font-family: var(--font-stack);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      text-shadow: 0 0 6px var(--glow-color);
-    }
-
-    /* CRT Scanline Overlay */
-    body::before {
-      content: " ";
-      display: block;
-      position: fixed;
-      top: 0; left: 0; bottom: 0; right: 0;
-      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
-                  linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-      z-index: 10;
-      background-size: 100% 3px, 6px 100%;
-      pointer-events: none;
-    }
-
-    .terminal-window {
-      width: 100%;
-      max-width: 760px;
-      border: 1px solid var(--ubuntu-header-border);
-      border-radius: 6px 6px 4px 4px;
-      box-shadow: 0 0 25px rgba(255, 42, 122, 0.2);
-      overflow: hidden;
-      background-color: var(--panel-bg);
-      z-index: 1;
-    }
-
-    /* Ubuntu Header Bar */
-    .terminal-header {
-      background: linear-gradient(180deg, #3c3b37 0%, var(--ubuntu-header) 100%);
-      padding: 8px 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--ubuntu-header-border);
-      user-select: none;
-    }
-
-    .terminal-title {
-      font-size: 0.85rem;
-      color: #dfdbd2;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-    }
-
-    .ubuntu-controls {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .control-btn {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background-color: #3d3a39;
-      color: #dfdbd2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 10px;
-      line-height: 1;
-      cursor: pointer;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .control-btn.close { background-color: #e95420; color: #fff; }
-
-    .terminal-body {
-      padding: 25px;
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.6;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
     }
 
-    .prompt { color: #ff5599; font-weight: bold; }
-    .command { color: #ffffff; text-shadow: 0 0 5px #ffffff; }
+    .container {
+      width: 100%;
+      max-width: 640px;
+    }
 
-    .output { margin: 10px 0 25px 0; color: #ff85b3; }
+    header {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
 
-    .post-list { list-style: none; }
-    .post-item { margin-bottom: 12px; display: flex; gap: 15px; flex-wrap: wrap; }
-    .post-date { color: var(--dim-pink); font-size: 0.9rem; }
+    h1 {
+      font-size: 1.8rem;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .bio {
+      color: var(--text-dim);
+      font-size: 1rem;
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-pink);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .post-list {
+      list-style: none;
+    }
+
+    .post-item {
+      margin-bottom: 20px;
+    }
 
     .post-link {
-      color: var(--main-pink);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
       text-decoration: none;
-      font-weight: bold;
+      padding: 14px 16px;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: all 0.2s ease;
     }
 
     .post-link:hover {
+      border-color: var(--accent-pink);
+      transform: translateY(-2px);
+    }
+
+    .post-title {
       color: #ffffff;
-      background-color: var(--dim-pink);
-      padding: 0 6px;
-      box-shadow: 0 0 10px var(--main-pink);
+      font-weight: 600;
+      font-size: 1.05rem;
     }
 
-    .cursor {
-      display: inline-block;
-      width: 9px;
-      height: 17px;
-      background-color: var(--main-pink);
-      vertical-align: middle;
-      box-shadow: 0 0 8px var(--main-pink);
-      animation: blink 1s infinite;
+    .post-date {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      white-space: nowrap;
+      margin-left: 15px;
     }
-
-    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
   </style>
 </head>
 <body>
 
-  <div class="terminal-window">
-    <div class="terminal-header">
-      <span class="terminal-title">usr@ubuntu: ~</span>
-      <div class="ubuntu-controls">
-        <span class="control-btn">—</span>
-        <span class="control-btn">□</span>
-        <span class="control-btn close">✕</span>
-      </div>
-    </div>
+  <div class="container">
+    <header>
+      <h1>Personal Logbook</h1>
+      <p class="bio">Thoughts on systems, rules, and building things on my own terms.</p>
+    </header>
 
-    <div class="terminal-body">
-      <p><span class="prompt">usr@ubuntu:~$</span> <span class="command">cat intro.txt</span></p>
-      <p class="output">
-        > Welcome to my terminal logbook.<br>
-        > Thoughts on systems, life rules, and unconventional paths.
-      </p>
-
-      <p><span class="prompt">usr@ubuntu:~$</span> <span class="command">ls -la ./posts</span></p>
+    <main>
+      <div class="section-title">Latest Articles</div>
       
-      <div class="output">
-        <ul class="post-list">
-          <li class="post-item">
-            <span class="post-date">[2026-08-22]</span>
-            <a href="posts/unquestioned-games.html" class="post-link">unquestioned-games.html</a>
-          </li>
-        </ul>
-      </div>
-
-      <p><span class="prompt">usr@ubuntu:~$</span> <span class="cursor"></span></p>
-    </div>
+      <ul class="post-list">
+        <li>
+          <a href="posts/unquestioned-games.html" class="post-link">
+            <span class="post-title">Playing the Game on Your Own Terms</span>
+            <span class="post-date">Aug 22, 2026</span>
+          </a>
+        </li>
+      </ul>
+    </main>
   </div>
 
 </body>
